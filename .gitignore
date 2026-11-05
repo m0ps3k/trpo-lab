@@ -1,0 +1,23 @@
+# === Специфика .NET / C# ===
+# Игнорирует папки bin и obj во ВСЕХ подпапках репозитория
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+# Скрывает локальные настройки Web API (чтобы не затереть чужие доступы)
+appsettings.Development.json
+
+# === Инструменты разработки (IDE) ===
+# Visual Studio
+.vs/
+# VS Code
+.vscode/
+# JetBrains Rider / Resharper
+.idea/
+*.sln.DotSettings.user
+
+# === Логи и системные файлы ===
+*.log
+.DS_Store
+Thumbs.db
+

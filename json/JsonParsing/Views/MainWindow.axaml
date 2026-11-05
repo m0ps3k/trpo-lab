@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:JsonParsing.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:generic="using:System.Collections.Generic"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="using:JsonParsing.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="JsonParsing.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="JsonParsing">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+        to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <StackPanel Orientation="Vertical" Margin="30" >
+        <Button Content="Кнопка" Command="{Binding ButtonPressCommand}" Margin="15" />
+        <TextBox Margin="15" Text="{Binding TextBoxContent}"></TextBox>
+        <TextBox Margin="15" Text="{Binding TextBoxContent2}"></TextBox>
+        <Label Content="{Binding LabelContent}" Margin="15"></Label>
+        <Label Content="{Binding LabelContent2}" Margin="15"></Label>
+    </StackPanel>
+</Window>
